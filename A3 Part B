@@ -1,0 +1,4 @@
+find /sandbox -type f -name "*.tmp" -exec rm -f {} \;
+find /sandbox -type f -name "*.html" | grep -w "oncology" > oncology-pages
+find /sandbox -type f -name "*.html" | grep -w "radiology" > radiology-pages
+diff oncology-pages radiology-pages
